@@ -1,0 +1,10 @@
+# Other python/editor specific files to ignore
+dist/
+build/
+*.pyc
+*.pyo
+*.swp
+*.egg-info
+*.conf
+*~
+
