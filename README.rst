@@ -36,3 +36,7 @@ Get it running
 
 
 This will launch the application at http://127.0.0.1:5000
+
+To change the host, port or see more options check the help with::
+
+    python dump_server.py --help
