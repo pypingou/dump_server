@@ -7,6 +7,7 @@
    Pierre-Yves Chibon <pingou@pingoured.fr>
 
 """
+from __future__ import unicode_literals, print_function
 
 __version__ = '1.0'
 
@@ -30,7 +31,8 @@ def main_get(path=None):  # pragma: no cover
         'path': path,
     }
     jsonout = flask.jsonify(output)
-    print jsonout.get_data()
+    #print(flask.request.headers)
+    print(jsonout.get_data(as_text=True))
     return jsonout
 
 
@@ -43,10 +45,12 @@ def main_post(path=None):  # pragma: no cover
         'args': flask.request.args,
         'values': flask.request.values,
         'form': flask.request.form,
+        'json': flask.request.json,
         'path': path,
     }
     jsonout = flask.jsonify(output)
-    print jsonout.get_data()
+    print(flask.request.headers)
+    print(jsonout.get_data(as_text=True))
     return jsonout
 
 
